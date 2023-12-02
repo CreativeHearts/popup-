@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="awsome css/all.min.css" />
+    <link rel="stylesheet" href="awsome css/fontawesome.min.css" />
+    <link rel="stylesheet" href="webfonts/" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700&family=IM+Fell+English+SC&family=Inter:wght@400;500;700&family=Kaushan+Script&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@200;400;600;800&family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Popup</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <img class="main-logo" src="logo name s.png" alt="logo image" />
+        <h2>Creative <span>Heart</span></h2>
+      </div>
+      <button class="submit">Submit</button>
+      <div class="popup">
+        <i class="fa-solid fa-circle-check"></i>
+        <img class="img" src="logo name s.png" alt="" />
+        <h2>Thank You!</h2>
+        <p>Your message is delivered successfully.. Thanks!</p>
+        <button class="okay">OK</button>
+      </div>
+      <div class="overlay hidden"></div>
+    </div>
+
+    <script>
+      const submit = document.querySelector(".submit");
+      const popup = document.querySelector(".popup");
+      const okay = document.querySelector(".okay");
+      const overlay = document.querySelector(".overlay");
+
+      submit.addEventListener("click", () => {
+        popup.classList.add("popup-visible");
+        overlay.classList.remove("hidden");
+      });
+      okay.addEventListener("click", () => {
+        popup.classList.remove("popup-visible");
+        overlay.classList.add("hidden");
+      });
+
+      let f;
+
+      const g = function () {
+        const a = 23;
+        f = function () {
+          console.log(a * 2);
+        };
+      };
+      g();
+      f();
+    </script>
+  </body>
+</html>
